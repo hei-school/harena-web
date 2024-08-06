@@ -1,4 +1,6 @@
-import { Admin, CustomRoutes, Resource } from 'react-admin';
+import { Admin } from '@react-admin/ra-enterprise';
+import { Resource } from 'react-admin';
+import { CustomRoutes } from 'react-admin';
 import { Route } from 'react-router-dom';
 import { PossessionEdit, PossessionShow } from './operations/posssessions';
 import { Layout } from './layout';
@@ -7,7 +9,7 @@ import { authProvider } from './providers/auth-provider';
 import { dataProvider } from './providers';
 import { PATRIMOINE_UI } from './operations/patrimoines';
 
-const Dashboard = () => (
+const App = () => (
   <Admin
     requireAuth
     title="Harena"
@@ -34,4 +36,5 @@ const Dashboard = () => (
   </Admin>
 );
 
-export default Dashboard;
+export default App
+;
