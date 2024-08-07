@@ -1,8 +1,8 @@
-import { PatrimoineList } from './patrimoine-list';
-import { PatrimoineShow } from './patrimoine-show';
-import { PatrimoineCreate } from './patrimoine-create';
+import { PatrimoineList } from './WealthList';
+import { PatrimoineShow } from './WealthShow';
+import { PatrimoineCreate } from './WealthCreate';
 import { UI } from '../common/utils/types';
-import { PatrimoineEdit } from './patrimoine-edit';
+import { PatrimoineEdit } from './WealthEdit';
 
 export const PATRIMOINE_UI: UI = {
   list: PatrimoineList,
