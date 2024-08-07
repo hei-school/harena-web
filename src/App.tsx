@@ -36,5 +36,4 @@ const App = () => (
   </Admin>
 );
 
-export default App
-;
+export default App;
