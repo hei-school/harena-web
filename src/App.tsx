@@ -7,7 +7,7 @@ import { Layout } from './layout';
 import { darkTheme, lightTheme } from './assets/theme';
 import { authProvider } from './providers/auth-provider';
 import { dataProvider } from './providers';
-import { PATRIMOINE_UI } from './operations/patrimoines';
+import { PATRIMOINE_UI } from './operations/wealth';
 
 const App = () => (
   <Admin
