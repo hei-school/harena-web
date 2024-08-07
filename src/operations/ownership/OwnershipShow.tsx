@@ -11,7 +11,7 @@ import { PossessionTypeField } from './components';
 import { Create as EditIcon, ArrowBack } from '@mui/icons-material';
 import { useParams } from 'react-router-dom';
 import { renderMoney } from '../common/utils/typo';
-import { ShowField } from './possession-create';
+import { ShowField } from './OwnershipCreate';
 import {
   Possession,
   PossessionAvecTypeTypeEnum,

@@ -7,7 +7,7 @@ import {
   TextField,
   TopToolbar,
 } from 'react-admin';
-import { PossessionList } from '../posssessions/possession-list';
+import { PossessionList } from '../ownership/OwnershipList';
 import { useParams } from 'react-router-dom';
 import { ProjectionShow } from '../projection-futures/flux-dargent-list';
 
