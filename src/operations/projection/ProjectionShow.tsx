@@ -11,7 +11,7 @@ import { FlexBox } from '../common/components/box';
 import { useEffect, useState } from 'react';
 import { projectionFutureApi } from '@/providers/api';
 
-export const FluxDargentList = () => {
+export const ProjectionShow = () => {
   const { id } = useParams();
 
   return (
