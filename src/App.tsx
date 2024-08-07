@@ -2,7 +2,7 @@ import { Admin } from '@react-admin/ra-enterprise';
 import { Resource } from 'react-admin';
 import { CustomRoutes } from 'react-admin';
 import { Route } from 'react-router-dom';
-import { PossessionEdit, PossessionShow } from './operations/posssessions';
+import { PossessionEdit, PossessionShow } from './operations/ownership';
 import { Layout } from './layout';
 import { darkTheme, lightTheme } from './assets/theme';
 import { authProvider } from './providers/auth-provider';

@@ -10,7 +10,7 @@ import {
 } from 'react-admin';
 import { RemoveRedEye } from '@mui/icons-material';
 import { Possession } from '@harena-com/typescript-client';
-import { DeviseInputs, DeviseType, getDeviseValue } from './possession-create';
+import { DeviseInputs, DeviseType, getDeviseValue } from './OwnershipCreate';
 import { useParams } from 'react-router-dom';
 import { required } from '@/operations/common/input-validator';
 

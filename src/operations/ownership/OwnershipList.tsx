@@ -16,7 +16,7 @@ import {
 } from '@mui/material';
 import { Add as CreateIcon } from '@mui/icons-material';
 import { Possession } from '@harena-com/typescript-client';
-import { PossessionCreate } from './possession-create';
+import { PossessionCreate } from './OwnershipCreate';
 import { PossessionTypeField } from './components';
 import { renderMoney } from '../common/utils/typo';
 import { useToggle } from '../common/hooks';
