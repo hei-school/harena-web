@@ -9,7 +9,7 @@ import {
 } from 'react-admin';
 import { PossessionList } from '../ownership/OwnershipList';
 import { useParams } from 'react-router-dom';
-import { ProjectionShow } from '../projection-futures/flux-dargent-list';
+import { ProjectionShow } from '../projection/ProjectionShow';
 
 const PatrimoineShowActions = () => {
   return (
