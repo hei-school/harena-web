@@ -24,8 +24,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
           aws-region: ${{ secrets.AWS_REGION }}
-          profile: hei
-      - run: sh ./init-npm.sh hei hei-store npm-hei-school 088312068315
+      - run: sh ./init-npm.sh hei-store npm-hei-school 088312068315
 
       - name: Install dependencies
         run: npm ci
@@ -53,11 +52,10 @@ jobs:
       - name: Connect to HEI AWS CodeArtifact
         uses: aws-actions/configure-aws-credentials@v4.0.1
         with:
-            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
-            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
-            aws-region: ${{ secrets.AWS_REGION }}
-            profile: hei
-      - run: sh ./init-npm.sh hei hei-store npm-hei-school 088312068315
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+          aws-region: ${{ secrets.AWS_REGION }}
+      - run: sh ./init-npm.sh hei-store npm-hei-school 088312068315
 
       - name: Run e2e tests
         uses: cypress-io/github-action@v6
