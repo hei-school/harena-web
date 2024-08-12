@@ -13,11 +13,11 @@ export const getPossessionTypeValue = (value: PossessionAvecType) => {
       return { ...value.argent!, typeEx: PossessionAvecTypeTypeEnum.ARGENT };
     case 'FLUXARGENT':
       return {
-        ...value.argent!,
+        ...value.flux_argent!,
         typeEx: PossessionAvecTypeTypeEnum.FLUXARGENT,
       };
     case 'MATERIEL':
-      return { ...value.argent!, typeEx: PossessionAvecTypeTypeEnum.MATERIEL };
+      return { ...value.materiel!, typeEx: PossessionAvecTypeTypeEnum.MATERIEL };
     default:
       throw new Error('Unknown PossessionAvecType value');
   }

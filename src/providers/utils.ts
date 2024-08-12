@@ -1,7 +1,6 @@
 import { Configuration } from '@harena-com/typescript-client';
 
 export const normalize = (value: string) => {
-  //@ts-ignore
   return value.replaceAll(' ', '_');
 };
 
