@@ -3,6 +3,7 @@ import {
   DateInput,
   Edit,
   number,
+  NumberInput,
   SimpleForm,
   TextInput,
   TopToolbar,
@@ -26,7 +27,7 @@ export const PossessionEdit = () => {
     <Edit
       id={possessionNom}
       resource="possessions"
-      queryOptions={{ meta: { patrimoineNom } }}
+      mutationOptions={{ meta: { patrimoineNom } }}
       actions={
         <TopToolbar>
           <Button
@@ -46,13 +47,12 @@ export const PossessionEdit = () => {
       <SimpleForm>
         <TextInput fullWidth source="nom" label="Nom" validate={required()} />
         <DateInput fullWidth source="t" label="Date T" validate={required()} />
-        <DateInput
+        <NumberInput
           fullWidth
           source="valeur_comptable"
           label="Valeur Comptable"
           validate={[required(), number()]}
         />
-        <DeviseInputs source="devise" />
         <DeviseInputs source="devise" />
       </SimpleForm>
     </Edit>
