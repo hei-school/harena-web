@@ -40,7 +40,7 @@ export const possessionProvider: HarenaDataProvider<Possession> = {
         response.data.data!.map((possession) => addPossessionId(possession))
       );
   },
-  saveOrUpdate: async (payload, { patrimoineNom }) => {
+  saveOrUpdate: async (payload, {patrimoineNom}) => {
     return possessionApi()
       .crupdatePatrimoinePossessions(patrimoineNom, 0, 0, {
         data: [payload as any],

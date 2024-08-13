@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {
   Datagrid,
@@ -6,10 +7,8 @@ import {
   TextField,
   useListContext,
 } from 'react-admin';
-import { Box } from '@mui/material';
 import { FlexBox } from '../common/components/box';
-import { useEffect, useState } from 'react';
-import { projectionFutureApi } from '@/providers/api';
+import { BASE_PATH } from '@/providers/utils';
 
 export const ProjectionShow = () => {
   const { id } = useParams();
@@ -25,20 +24,12 @@ export const ProjectionShow = () => {
         <DateInput source="debut" label="Debut" alwaysOn />,
         <DateInput source="fin" label="Fin" alwaysOn />,
       ]}
-      filterDefaultValues={{
-        fin: new Date('2024-07-30').toISOString(),
-        debut: new Date().toISOString(),
-      }}
       exporter={false}
     >
-      <FlexBox>
+      <FlexBox sx={{ width: '100%' }}>
+        <Graphe />
         <Datagrid bulkActionButtons={false}>
-          <FlexBox sx={{ width: '100%' }}>
-            <Graphe />
-            <Box sx={{ flex: 1 }}>
-              <TextField source="nom" label="Nom" />
-            </Box>
-          </FlexBox>
+          <TextField source="nom" label="Nom" />
         </Datagrid>
       </FlexBox>
     </List>
@@ -48,28 +39,18 @@ export const ProjectionShow = () => {
 export const Graphe = () => {
   const { id } = useParams();
   const { filterValues } = useListContext();
-  const [state, setState] = useState<any>([]);
+  const [grapheUrl, setGrapheUrl] = useState("");
 
   useEffect(() => {
-    const test = async () => {
-      const defaultDebut = new Date().toISOString();
-      const defaultFin = new Date('2025-07-30').toISOString();
-
-      const graphe = await projectionFutureApi()
-        .getPatrimoineGraph(
-          id!,
-          (filterValues.debut = defaultDebut),
-          (filterValues.fin = defaultFin)
-        )
-        .then((response) => response.data);
-      setState(URL.createObjectURL(new Blob([graphe as any])));
-    };
-    test();
-  }, [id]);
+    const debut = filterValues.debut ? new Date(filterValues.debut) : new Date();
+    const fin = filterValues.fin ? new Date(filterValues.fin) : new Date(debut.getFullYear() + 1, debut.getMonth(), debut.getDate());
+    const url = `${BASE_PATH}/patrimoines/${id}/graphe?debut=${debut.toLocaleDateString()}&fin=${fin.toLocaleDateString()}`
+    setGrapheUrl(url);
+  }, [id, filterValues.debut, filterValues.fin]);
 
   return (
     <img
-      src={state as string}
+      src={grapheUrl}
       width="400px"
       style={{ display: 'block' }}
       height="300px"

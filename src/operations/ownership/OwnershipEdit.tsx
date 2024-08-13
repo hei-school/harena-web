@@ -27,7 +27,7 @@ export const PossessionEdit = () => {
     <Edit
       id={possessionNom}
       resource="possessions"
-      queryOptions={{ meta: { patrimoineNom } }}
+      mutationOptions={{ meta: { patrimoineNom } }}
       actions={
         <TopToolbar>
           <Button
