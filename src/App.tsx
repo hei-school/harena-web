@@ -4,7 +4,7 @@ import { CustomRoutes } from 'react-admin';
 import { Route } from 'react-router-dom';
 import { PossessionEdit, PossessionShow } from './operations/ownership';
 import { Layout } from './layout';
-import { darkTheme, lightTheme } from './assets/theme';
+import { lightTheme } from './assets/theme';
 import { authProvider } from './providers/auth-provider';
 import { dataProvider } from './providers';
 import { PATRIMOINE_UI } from './operations/wealth';
@@ -15,8 +15,7 @@ const App = () => (
     title="Harena"
     defaultTheme="dark"
     layout={Layout}
-    lightTheme={lightTheme}
-    darkTheme={darkTheme}
+    theme={lightTheme}
     authProvider={authProvider}
     dataProvider={dataProvider}
   >

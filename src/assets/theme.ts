@@ -2,7 +2,6 @@ import { RaThemeOptions } from 'react-admin';
 import { createTheme as createMuiTheme, ThemeOptions } from '@mui/material';
 import {
   catpuccinLatte,
-  catpuccinMocha,
   CatpuccinPalletes,
 } from './catpuccin-palletes';
 
@@ -89,5 +88,3 @@ const createTheme = (palette: CatpuccinPalletes, mode: 'light' | 'dark') => {
 };
 
 export const lightTheme = createTheme(catpuccinLatte, 'light');
-
-export const darkTheme = createTheme(catpuccinMocha, 'dark');
