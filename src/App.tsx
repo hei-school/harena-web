@@ -3,7 +3,7 @@ import { Resource } from 'react-admin';
 import { CustomRoutes } from 'react-admin';
 import { Route } from 'react-router-dom';
 import { PossessionEdit, PossessionShow } from './operations/ownership';
-import { Layout } from './layout';
+import { HrLayout } from './common';
 import { lightTheme } from './assets/theme';
 import { authProvider } from './providers/auth-provider';
 import { dataProvider } from './providers';
@@ -14,7 +14,7 @@ const App = () => (
     requireAuth
     title="Harena"
     defaultTheme="dark"
-    layout={Layout}
+    layout={HrLayout}
     theme={lightTheme}
     authProvider={authProvider}
     dataProvider={dataProvider}
