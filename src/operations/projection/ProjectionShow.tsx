@@ -39,12 +39,16 @@ export const ProjectionShow = () => {
 export const Graphe = () => {
   const { id } = useParams();
   const { filterValues } = useListContext();
-  const [grapheUrl, setGrapheUrl] = useState("");
+  const [grapheUrl, setGrapheUrl] = useState('');
 
   useEffect(() => {
-    const debut = filterValues.debut ? new Date(filterValues.debut) : new Date();
-    const fin = filterValues.fin ? new Date(filterValues.fin) : new Date(debut.getFullYear() + 1, debut.getMonth(), debut.getDate());
-    const url = `${BASE_PATH}/patrimoines/${id}/graphe?debut=${debut.toLocaleDateString()}&fin=${fin.toLocaleDateString()}`
+    const debut = filterValues.debut
+      ? new Date(filterValues.debut)
+      : new Date();
+    const fin = filterValues.fin
+      ? new Date(filterValues.fin)
+      : new Date(debut.getFullYear() + 1, debut.getMonth(), debut.getDate());
+    const url = `${BASE_PATH}/patrimoines/${id}/graphe?debut=${debut.toLocaleDateString()}&fin=${fin.toLocaleDateString()}`;
     setGrapheUrl(url);
   }, [id, filterValues.debut, filterValues.fin]);
 

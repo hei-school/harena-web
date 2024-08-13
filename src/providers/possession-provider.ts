@@ -17,7 +17,10 @@ export const getPossessionTypeValue = (value: PossessionAvecType) => {
         typeEx: PossessionAvecTypeTypeEnum.FLUXARGENT,
       };
     case 'MATERIEL':
-      return { ...value.materiel!, typeEx: PossessionAvecTypeTypeEnum.MATERIEL };
+      return {
+        ...value.materiel!,
+        typeEx: PossessionAvecTypeTypeEnum.MATERIEL,
+      };
     default:
       throw new Error('Unknown PossessionAvecType value');
   }
@@ -40,7 +43,7 @@ export const possessionProvider: HarenaDataProvider<Possession> = {
         response.data.data!.map((possession) => addPossessionId(possession))
       );
   },
-  saveOrUpdate: async (payload, {patrimoineNom}) => {
+  saveOrUpdate: async (payload, { patrimoineNom }) => {
     return possessionApi()
       .crupdatePatrimoinePossessions(patrimoineNom, 0, 0, {
         data: [payload as any],
