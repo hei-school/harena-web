@@ -87,4 +87,4 @@ const createTheme = (palette: CatpuccinPalletes, mode: 'light' | 'dark') => {
   return createMuiTheme(options);
 };
 
-export const lightTheme = createTheme(catpuccinLatte, 'light');
+export const lightTheme = createTheme(catpuccinLatte, 'dark');

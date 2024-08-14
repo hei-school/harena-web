@@ -4,18 +4,17 @@ import { CustomRoutes } from 'react-admin';
 import { Route } from 'react-router-dom';
 import { PossessionEdit, PossessionShow } from './operations/ownership';
 import { HrLayout } from './common';
-import { lightTheme } from './assets/theme';
 import { authProvider } from './providers/auth-provider';
 import { dataProvider } from './providers';
 import { PATRIMOINE_UI } from './operations/wealth';
+import {HR_THEME} from './HrTheme';
 
 const App = () => (
   <Admin
     requireAuth
     title="Harena"
-    defaultTheme="dark"
     layout={HrLayout}
-    theme={lightTheme}
+    theme={HR_THEME}
     authProvider={authProvider}
     dataProvider={dataProvider}
   >
