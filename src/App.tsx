@@ -6,7 +6,7 @@ import { PossessionEdit, PossessionShow } from './operations/ownership';
 import { HrLayout } from './common';
 import { authProvider } from './providers/auth-provider';
 import { dataProvider } from './providers';
-import { PATRIMOINE_UI } from './operations/wealth';
+import { PATRIMONY_UI } from './operations/patrimony';
 import {HR_THEME} from './HrTheme';
 
 const App = () => (
@@ -18,7 +18,7 @@ const App = () => (
     authProvider={authProvider}
     dataProvider={dataProvider}
   >
-    <Resource name="patrimoines" {...PATRIMOINE_UI} />
+    <Resource name="patrimoines" {...PATRIMONY_UI} />
     <Resource name="possessions" />
     <Resource name="fluxImpossibles" />
     <CustomRoutes>

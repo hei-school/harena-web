@@ -7,7 +7,7 @@ import {
   TextField,
   TopToolbar,
 } from 'react-admin';
-import { PossessionList } from '../ownership/OwnershipList';
+import { PossessionList } from '@/operations/ownership';
 import { useParams } from 'react-router-dom';
 import { ProjectionShow } from '../projection/ProjectionShow';
 

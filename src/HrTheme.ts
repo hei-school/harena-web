@@ -3,22 +3,30 @@ import { defaultTheme } from 'react-admin';
 const important = (value: string) => `${value} !important`;
 
 export const HR_COLOR = {
-  2: '#ab005650',
-  5: '#ab0056',
-  10: '#7A003D',
-  20: '#660033',
-  30: '#582d37',
-  40: '#F1E4E7',
+  white: '#fff',
+  2: '#F5F5F5',
+  5: '#EDF7FB',
+  10: '#F2DCD6',
+  20: '#FCF4EC',
+  30: '#6D4A71',
+  40: '#4D2751',
+  50: '#421847',
+  text: '#5c5f77',
+  black: '#202020',
   solid_grey: 'rgb(0, 0, 0, 0.05)',
+  background: '#F5F5F5',
 };
 
-export const BP_BUTTON = {
-  color: '#fff',
-  backgroundColor: HR_COLOR[10],
-  textTransform: 'unset',
+export const HR_BUTTON = {
+  'color': HR_COLOR['white'],
+  'backgroundColor': HR_COLOR[40],
+  'height': 35,
+  'textTransform': 'unset',
   '&:hover, &:active': {
-    backgroundColor: HR_COLOR['20'],
+    backgroundColor: HR_COLOR[2],
     cursor: 'pointer',
+    color: HR_COLOR[40],
+    boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.1) !important',
   },
   '&:disabled': {
     backgroundColor: HR_COLOR['solid_grey'],
@@ -46,18 +54,18 @@ export const HR_THEME = {
   },
   palette: {
     background: {
-      default: '#F5F5F5',
+      default: HR_COLOR['background'],
     },
     primary: {
-      light: '#ab0056',
-      main: '#7A003D',
-      dark: '#660033',
-      contrastText: '#fff',
-    },
-    secondary: {
       light: '#6ec6ff',
       main: '#2196f3',
       dark: '#0069c0',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#ab0056',
+      main: '#7A003D',
+      dark: '#660033',
       contrastText: '#fff',
     },
   },
@@ -72,12 +80,12 @@ export const HR_THEME = {
     RaMenuItemLink: {
       styleOverrides: {
         root: {
-          height: 40,
-          marginLeft: 3,
-          paddingLeft: '12px',
-          borderRadius: '6px',
+          'height': 40,
+          'marginLeft': 3,
+          'paddingLeft': '12px',
+          'borderRadius': '6px',
           '&.RaMenuItemLink-active': {
-            backgroundColor: HR_COLOR[10],
+            backgroundColor: HR_COLOR[40],
             color: '#fff',
             borderLeft: '3px solid #fff',
           },
@@ -96,8 +104,8 @@ export const HR_THEME = {
     RaLayout: {
       styleOverrides: {
         root: {
-          paddingLeft: 2,
-          marginTop: '1.5rem',
+          'paddingLeft': 2,
+          'marginTop': '1.5rem',
           '&. RaLayout-content': {
             marginTop: '2rem',
             zIndex: 1,
@@ -158,13 +166,13 @@ export const HR_THEME = {
       styleOverrides: {
         root: {
           '&.MuiTableCell-head': {
-            backgroundColor: HR_COLOR[10],
-            color: 'white',
+            'backgroundColor': HR_COLOR['white'],
+            'color': HR_COLOR['text'],
             '.MuiCheckbox-root': {
               color: '#fff',
             },
             '.Mui-active': {
-              color: '#fff',
+              color: HR_COLOR['text'],
             },
           },
         },
@@ -181,20 +189,20 @@ export const HR_THEME = {
     RaList: {
       styleOverrides: {
         root: {
-          '& .RaList-main button': BP_BUTTON,
+          '& .RaList-main button': HR_BUTTON,
         },
       },
     },
     MuiButton: {
       styleOverrides: {
-        root: BP_BUTTON,
+        root: HR_BUTTON,
       },
     },
     MuiSwitch: {
       styleOverrides: {
         root: {
           '& .Mui-checked': {
-            color: important(HR_COLOR[10]),
+            'color': important(HR_COLOR[10]),
             '& +.MuiSwitch-track': {
               backgroundColor: important(HR_COLOR[40]),
               opacity: 1,
@@ -212,7 +220,7 @@ export const HR_THEME = {
           '& .Mui-selected': {
             color: important(HR_COLOR[10]),
           },
-          borderBottom: `1px solid ${HR_COLOR['solid_grey']}`,
+          'borderBottom': `1px solid ${HR_COLOR['solid_grey']}`,
         },
       },
     },
