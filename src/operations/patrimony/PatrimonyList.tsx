@@ -5,24 +5,33 @@ import {
   List,
   TextField,
 } from 'react-admin';
-import { Card, CardContent } from '@mui/material';
-import { HR_COLOR } from '@/HrTheme';
+import { Box } from '@mui/material';
+
+export const IMPORT_BUTTON_STYLE = {
+  width: '8rem',
+  paddingBlock: 1,
+};
 
 export const PatrimonyList = () => {
   return (
     <>
-      <Card
+      <Box
         sx={{
           marginTop: 1,
           border: 0,
-          background: HR_COLOR['background'],
+          height: 60,
           display: 'flex',
+          justifyContent: 'flex-start',
+          paddingLeft: 2,
+          alignItems: 'center',
         }}
       >
-        <CardContent>
-          <CreateButton data-testid="create-button" />
-        </CardContent>
-      </Card>
+        <CreateButton
+          data-testid="create-button"
+          label="Créer"
+          sx={IMPORT_BUTTON_STYLE}
+        />
+      </Box>
       <List resource="patrimoines" actions={false}>
         <Datagrid bulkActionButtons={false}>
           <TextField source="nom" label="Nom" />
