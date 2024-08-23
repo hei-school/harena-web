@@ -215,10 +215,10 @@ export const HR_THEME = {
       styleOverrides: {
         root: {
           '& 	.MuiTabs-indicator': {
-            backgroundColor: HR_COLOR[5],
+            backgroundColor: HR_COLOR[10],
           },
           '& .Mui-selected': {
-            color: important(HR_COLOR[10]),
+            color: important(HR_COLOR[30]),
           },
           'borderBottom': `1px solid ${HR_COLOR['solid_grey']}`,
         },

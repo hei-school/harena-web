@@ -10,9 +10,9 @@ import {
 } from 'react-admin';
 import {
   Dialog,
-  DialogTitle,
   DialogActions,
   DialogContent,
+  DialogTitle,
 } from '@mui/material';
 import { Add as CreateIcon } from '@mui/icons-material';
 import { Possession } from '@harena-com/typescript-client';
@@ -20,6 +20,7 @@ import { PossessionCreate } from './OwnershipCreate';
 import { PossessionTypeField } from './components';
 import { renderMoney } from '../common/utils/typo';
 import { useToggle } from '../common/hooks';
+import { IMPORT_BUTTON_STYLE } from '@/operations/patrimony/PatrimonyList';
 
 export const PossessionListActions = ({
   toggleCreateDialog,
@@ -30,8 +31,9 @@ export const PossessionListActions = ({
     <TopToolbar>
       <Button
         startIcon={<CreateIcon />}
-        label="Add new Possession"
+        label="Ajouter"
         onClick={toggleCreateDialog}
+        sx={IMPORT_BUTTON_STYLE}
       />
     </TopToolbar>
   );
