@@ -1,6 +1,7 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 import { grey } from '@mui/material/colors';
+import HrBackgroundImage from '../../assets/harena-logo.png';
 
 export const lightGreyColor = grey[100];
 
@@ -17,6 +18,18 @@ const BpLoginPageLayout = ({ children }) => {
         overflow: 'hidden',
       }}
     >
+      {
+        <img
+          src={HrBackgroundImage}
+          style={{
+            position: 'absolute',
+            top: '3%',
+            left: '2%',
+            width: '120px',
+          }}
+          alt="Bienvenue sur BPartners !"
+        />
+      }
       <Box
         sx={{
           display: 'flex',
@@ -32,31 +45,19 @@ const BpLoginPageLayout = ({ children }) => {
         {children}
       </Box>
       <Box
-        width={{ md: '60%', sm: '0%', xs: '0%' }}
+        width={{ md: '55%', sm: '0%', xs: '0%' }}
         sx={{
           display: 'flex',
           justifyContent: 'center',
           bgcolor: lightGreyColor,
-          height: '100vh',
+          height: '110vh',
           alignItems: 'center',
           overflow: 'hidden',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
         }}
-      >
-        <Typography
-          sx={{
-            color: '#F5F5F5',
-            fontStyle: 'italic',
-            position: 'absolute',
-            bottom: '6.5rem',
-          }}
-        >
-          L'assistant intelligent qui accélère la croissance des artisans et
-          indépendants.
-        </Typography>
-      </Box>
+      ></Box>
     </Box>
   );
 };

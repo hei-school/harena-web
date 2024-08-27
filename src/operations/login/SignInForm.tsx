@@ -40,12 +40,6 @@ export const SignInForm = () => {
           minWidth: '30vh',
         }}
       >
-        <img
-          src="../../assets/harena-logo.png"
-          width={50}
-          height={50}
-          alt="Bienvenue sur BPartners !"
-        />
         <Typography variant="h5" gutterBottom mt={1} color={'black'}>
           Bienvenue !
         </Typography>
