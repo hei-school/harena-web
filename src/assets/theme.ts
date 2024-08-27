@@ -1,10 +1,6 @@
 import { RaThemeOptions } from 'react-admin';
 import { createTheme as createMuiTheme, ThemeOptions } from '@mui/material';
-import {
-  catpuccinLatte,
-  catpuccinMocha,
-  CatpuccinPalletes,
-} from './catpuccin-palletes';
+import { catpuccinLatte, CatpuccinPalletes } from './catpuccin-palletes';
 
 const createTheme = (palette: CatpuccinPalletes, mode: 'light' | 'dark') => {
   const titles = { fontFamily: 'montserrat', color: palette.text['main'] };
@@ -88,6 +84,4 @@ const createTheme = (palette: CatpuccinPalletes, mode: 'light' | 'dark') => {
   return createMuiTheme(options);
 };
 
-export const lightTheme = createTheme(catpuccinLatte, 'light');
-
-export const darkTheme = createTheme(catpuccinMocha, 'dark');
+export const lightTheme = createTheme(catpuccinLatte, 'dark');
