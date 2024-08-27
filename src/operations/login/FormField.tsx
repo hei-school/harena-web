@@ -13,8 +13,16 @@ const textFieldStyle = {
 
 // @ts-ignore
 export const BpFormField = (props) => {
-  const { name, label, type, validate, style, shouldValidate, ...others } =
-    props;
+  const {
+    name,
+    label,
+    type,
+    validate,
+    style,
+    shouldValidate,
+    variant,
+    ...others
+  } = props;
   const {
     register,
     formState: { errors },
@@ -66,12 +74,13 @@ export const BpFormField = (props) => {
       {...dateProps}
       {...errorStyle}
       {...others}
-      variant="filled"
+      variant={variant ?? 'filled'}
       {...customRegister}
       data-testid={`${name}-field-input`}
       type={type === 'password' ? passwordType : type}
       style={style || textFieldStyle}
       value={record[name] || ''}
+      color={'secondary'}
       InputProps={{
         endAdornment: type === 'password' && (
           <IconButton

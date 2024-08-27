@@ -40,27 +40,54 @@ export const SignInForm = () => {
           minWidth: '30vh',
         }}
       >
-        <Typography variant="h5" gutterBottom mt={1} color={'black'}>
+        <Typography
+          variant="h5"
+          fontWeight={'bold'}
+          gutterBottom
+          mt={1}
+          color={HR_COLOR[30]}
+        >
           Bienvenue !
         </Typography>
-        <BpFormField name="username" label="Votre email" />
-        <BpFormField name="password" type="password" label="Mot de passe" />
+        <BpFormField
+          name="username"
+          label="Votre email"
+          variant={'outlined'}
+          style={{
+            marginBlock: 3,
+            width: 300,
+            marginTop: 10,
+          }}
+        />
+        <BpFormField
+          name="password"
+          type="password"
+          label="Mot de passe"
+          variant={'outlined'}
+          style={{
+            marginBlock: 3,
+            width: 300,
+            marginTop: 10,
+            marginBottom: 5,
+          }}
+        />
         <Button
           id="login"
           style={{ marginTop: '0.5rem' }}
           type="submit"
           sx={{
             'textTransform': 'none',
-            'bgcolor': 'rgba(156, 37, 90, 1)',
+            'bgcolor': HR_COLOR[30],
             'color': whiteColor,
             'width': '300px',
+            'height': '40px',
             '&:hover': {
-              background: HR_COLOR[5],
+              background: HR_COLOR[50],
               opacity: 1,
             },
             '&:disabled': {
               background: darkGreyColor,
-              bgcolor: whiteColor,
+              color: whiteColor,
             },
           }}
         >
