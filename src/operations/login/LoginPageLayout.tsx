@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 
 import { grey } from '@mui/material/colors';
 import HrBackgroundImage from '../../assets/harena-logo.png';
+import Spline from '@splinetool/react-spline';
 
 export const lightGreyColor = grey[100];
 
@@ -48,8 +49,7 @@ const BpLoginPageLayout = ({ children }) => {
         width={{ md: '55%', sm: '0%', xs: '0%' }}
         sx={{
           display: 'flex',
-          justifyContent: 'center',
-          bgcolor: lightGreyColor,
+          justifyContent: 'flex-start',
           height: '110vh',
           alignItems: 'center',
           overflow: 'hidden',
@@ -57,7 +57,12 @@ const BpLoginPageLayout = ({ children }) => {
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
         }}
-      ></Box>
+      >
+        <Spline
+          scene="https://prod.spline.design/LK8ejaUxl227aam7/scene.splinecode"
+          style={{ width: 570, height: 570, marginLeft: 30, marginTop: 100 }}
+        />
+      </Box>
     </Box>
   );
 };

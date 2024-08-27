@@ -20,6 +20,7 @@
     "@react-admin/ra-enterprise": "^8.0.0",
     "@react-admin/ra-navigation": "^5.0.0",
     "@react-admin/ra-rbac": "^5.0.0",
+    "@splinetool/react-spline": "^4.0.0",
     "@tanstack/react-query": "^5.51.4",
     "axios": "^1.7.2",
     "install": "^0.13.0",
