@@ -4,6 +4,7 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { HR_COLOR } from '@/HrTheme';
 import { grey } from '@mui/material/colors';
 import { BpFormField } from '@/operations/login/FormField';
+import { useNavigate } from 'react-router-dom';
 
 export const lightGreyColor = grey[100];
 export const darkGreyColor = grey[800];
@@ -15,7 +16,7 @@ export const SignInForm = () => {
     defaultValues: { username: '', password: '' },
   });
 
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // Fonction pour mettre à jour la largeur de la fenêtre lors du redimensionnement
   const updateWindowWidth = () => {};
@@ -89,6 +90,9 @@ export const SignInForm = () => {
               background: darkGreyColor,
               color: whiteColor,
             },
+          }}
+          onClick={() => {
+            navigate('/patrimoines');
           }}
         >
           Se connecter

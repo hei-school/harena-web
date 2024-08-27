@@ -7,7 +7,7 @@ const App = () => (
   <BrowserRouter>
     <Routes>
       <Route
-        path="/login"
+        path="/"
         element={
           <LoginPageLayout>
             <SignInForm />
