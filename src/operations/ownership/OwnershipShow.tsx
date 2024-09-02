@@ -58,7 +58,7 @@ const PossessionShowActions = () => {
         }}
       >
         <Button
-          href={`/#/patrimoines/${patrimoineNom}/possessions/${possessionNom}/edit`}
+          href={`/patrimoines/${patrimoineNom}/possessions/${possessionNom}/edit`}
           startIcon={<EditIcon />}
           label="Modifier"
           variant="contained"
